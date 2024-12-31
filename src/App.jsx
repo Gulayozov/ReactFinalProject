@@ -1,22 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
-import DashboardPage from './pages/DashboardPage';
-import EvasiveButton from './components/EvasiveButton';
-
-
-import './styles/style.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignupPage from './components/SignupPage';
+import LoginPage from './components/LoginPage';
+import DashboardPage from './components/DashboardPage';
 
 const App = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<LoginPage />} /> {/* Default route */}
-                <Route path="/login" element={<LoginPage />} />
                 <Route path="/signup" element={<SignupPage />} />
+                <Route path="/login" element={<LoginPage />} />
                 <Route path="/dashboard" element={<DashboardPage />} />
-                <Route path="/evasivebutton" element={<EvasiveButton />} />
+                <Route path="/" element={<SignupPage />} />
             </Routes>
         </Router>
     );
